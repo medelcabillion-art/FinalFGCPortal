@@ -285,3 +285,15 @@ nav button.on{font-weight:600}
 /* welcome / goodbye screen */
 .w-title{font-size:26px;font-weight:700}
 .w-sub{font-size:15px}
+
+/* goodbye screen after log out */
+.welcome.bye{background:linear-gradient(135deg,#0f766e,#0b5f58)}
+.welcome.bye .w-tick{animation-duration:.6s}
+
+/* ===== Always plain white, even when the iPad / phone is in Dark Mode ===== */
+:root{color-scheme:light}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#ffffff;--card:#ffffff;--txt:#111827;--mut:#5b6472;--pri:#0f766e;--deep:#0f766e;--mint:#d7efea;--line:#e5e7eb;color-scheme:light}
+  :root:not([data-theme="light"]) .wm{filter:none}
+}
+:root[data-theme="dark"]{--bg:#ffffff;--card:#ffffff;--txt:#111827;--mut:#5b6472;--pri:#0f766e;--deep:#0f766e;--mint:#d7efea;--line:#e5e7eb;color-scheme:light}
